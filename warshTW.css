@@ -1,0 +1,373 @@
+
+
+@font-face {
+    font-family: 'MadaniArabic-Regular';
+    src: url('fonts/alfont_com_Madani-Arabic-Regular.ttf') format('truetype');
+    font-weight: medium;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MadaniArabic-Medium';
+    src: url('fonts/alfont_com_Madani-Arabic-Medium.ttf') format('truetype');
+    font-weight: medium;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'MadaniArabic-Light';
+    src: url('fonts/alfont_com_Madani-Arabic-Light.ttf') format('truetype');
+    font-weight: medium;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Arimo';
+    src: url('fonts/Arimo-Italic.ttf') format('truetype');
+    font-weight: medium;
+    font-style: normal;
+}
+*{
+    font-family:MadaniArabic-Regular ;
+}
+
+
+/*font*/
+.font-family-regular-css{
+  font-family: MadaniArabic-Regular;
+  font-size: 19.6px;
+}
+
+/*======================Logo & Main title=======================*/
+
+
+ .logo-title::before{
+  content: ' دورة قواعد التجويد (أصول ورش) ';
+  font-family:MadaniArabic-Regular ;
+  font-size: 22px;
+  color: rgb(105, 22, 11);
+  padding: 10px 15px;
+  background-color: white;
+  position: absolute;
+  right: -320px;
+  top: 10px;
+  z-index: -1;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+} 
+
+/*1/3 circle effect*/
+.logo-title::after{
+  content: '';
+ position: absolute;
+  width: 80px; 
+  height: 80px;
+  border-radius: 50%; 
+  left: -10px;
+  top: -8px;
+  background: conic-gradient(
+      transparent 0deg,
+      transparent 240deg, /* 2/3 */
+      white 240deg, 
+      white 360deg /* 1/3 */
+  );
+  mask: radial-gradient(circle, transparent 62%, white 62%); /* Cuts out the inner circle */
+  -webkit-mask: radial-gradient(circle, transparent 62%, white 62%); /* Safari support */
+}
+
+
+/*=======================================SECTION 1*/
+   
+   .arrow-left-css::after{ /*white arrow*/
+      content: '';
+      position: absolute;
+      transform: rotate(-90deg);
+      border-bottom: 30px solid transparent;
+      border-right: 30px solid transparent;
+      border-left: 30px solid transparent;
+      border-top: 40px solid white;
+      bottom: -30px;
+      left: 50px;
+      bottom: -30px;
+      left: 50px;
+    } 
+    
+    .taj-sticker::after{
+        content: url('images/دورة التجويد (42).png'); /*taj al wakar  sticker*/
+      position: absolute;
+      transform: scale(0.6);
+      bottom: -90px;
+      left: -10px;
+  
+    }
+   
+    @media(max-width:1280px){
+      .sticker-right-css::before{ /*right sticker*/
+        content: url('images/woman.png');
+        position: absolute;
+      transform: scale(0.2);
+      top: -150px;
+      right: -100px;
+      }
+  
+  }
+/*=======================================SECTION 2*/
+  @media(max-width:1280px){
+
+    .sticker-left-css::before{ 
+    content: url('images/woman.png');
+    position: absolute;
+    transform: scale(0.4);
+    top: -90px;
+    right: -50px;
+    border-radius: 50%;
+
+      }
+  
+  }
+
+
+
+
+@media(max-width: 896px){
+  .table-container{
+  width: 100%;
+  }
+  .title-container{
+    width: 90%;
+  }
+  .info01, .info02{
+    padding: 0px !important; 
+    align-items: start;
+    gap: 10px; 
+  }
+  }
+/*3th content*/
+
+.title-3{
+    margin-right: 30px;
+    text-align: center;
+}
+
+
+
+.gold-marker::before{ /*keep*/
+  content: '';
+  display: inline-block;
+  width: 20px; 
+  height: 20px; 
+  background-image: url('images/sparkles.png'); 
+  background-size: contain; 
+  background-repeat: no-repeat; 
+  margin-left: 20px;
+}
+  /*=======================================part 4*/
+  /*1st content*/
+  .icons-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    margin-right: 10px;
+    top: 0;
+    left: 1%;
+    height: 100%;
+    z-index: 1;
+
+  }
+  .icons-left img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+  }
+  .message-left-icons {
+    background-color: white;
+    color: black;
+    padding: 0px;
+    position: relative;
+    border-radius: 80px; /*modified*/
+    padding: 20px;
+    padding-left: 50px; /* x% * woman(width)*/ /*modified*/
+  }
+  .message-left-icons::after{
+    content: '';
+    position: absolute;
+    transform: rotate(-90deg);
+    border-bottom: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-left: 30px solid transparent;
+    border-top: 40px solid white;
+    bottom: -30px;
+    left: 50px;
+    bottom: -30px;
+    left: 50px;
+  }
+  @media(max-width: 500px){
+    .icons-left{
+        flex-direction: row;
+        justify-content: center;
+        top: -30px;
+        left: -2%; 
+      }
+      .icons-left img{
+        background-color: transparent;
+      }
+  }
+  /* remove the 1st li element marker*/
+  .message-left-icons ul li:nth-child(1){
+    list-style: none;
+  }
+  @media(max-width: 1000px){
+
+    .icons-left img{
+        margin: 10px;
+        height: 40px;
+        width: 40px;
+
+      }
+      .message-left-icons{
+        padding-right: 10px;
+        padding-left: 0px;
+        border-radius: 20px;
+    
+    }      
+      .message-left-icon::before{
+      content: url('images/دورة التجويد (57).png');
+      position: absolute;
+      transform: scale(0.25);
+      top: -130px;
+      right: -100px;
+      background-color: pink;
+      border-radius: 50%;
+        }
+  }
+
+/*==================================================ICONS=*/
+.pink-marker::before{
+  padding: 0;
+  content: '';
+  display: inline-block;
+  width: 30px; 
+  height: 30px; 
+  background-image: url('images/دورة التجويد (32).png'); 
+  background-size: contain; 
+  background-repeat: no-repeat; 
+  margin-left: 20px;
+  border-radius: 50%;
+  filter: drop-shadow(5px 5px 5px rgb(255, 2, 44)); 
+
+}
+
+.env-icon::after, .env-icon::before{
+  content: url('images/دورة التجويد (29).png'); /*taj al wakar  sticker*/
+position: relative;
+transform: scale(0.7);
+z-index: 1000000;
+}
+
+.sun::before {
+    content: '';
+    position: relative;
+    display: inline-block;
+    width: 40px; /* Set desired width */
+    height: 40px; /* Set desired height */
+    background-image: url('images/دورة التجويد (36).png');
+    background-size: contain; /* Ensure image scales */
+    background-repeat: no-repeat;
+ }
+.moon::before {
+  content: '';
+  position: relative;
+  display: inline-block;
+  width: 40px; /* Set desired width */
+  height: 40px; /* Set desired height */
+  background-image: url('images/دورة التجويد (24).png'); 
+  background-size: contain; /* Ensure image scales */
+  background-repeat: no-repeat;
+}
+.cad-icon::before {
+  content: '';
+  position: relative;
+  display: inline-block;
+  width: 50px; /* Set desired width */
+  height: 50px; /* Set desired height */
+  background-image:  url('images/دورة التجويد (34).png');
+  background-size: contain; /* Ensure image scales */
+  background-repeat: no-repeat;
+  right: -100px;
+}
+.cad-icon::after {
+  content: '';
+  position: relative;
+  display: inline-block;
+  width: 40px; /* Set desired width */
+  height: 40px; /* Set desired height */
+  background-image:  url('images/دورة التجويد (35).png');
+  background-size: contain; /* Ensure image scales */
+  background-repeat: no-repeat;
+  left: -90px;
+}
+.cad-icon-right{
+  transform: scale(0.7);
+  position: relative;
+  left: -50px;
+  top: 10px;
+}
+.cad-icon-left{
+  transform: scale(0.7);
+  position: relative;
+  right: -50px;
+  top: 10px;
+}
+@media(max-width: 1270px){
+  .cad-icon-right{
+    transform: scale(0.7);
+    position: relative;
+    left: -20px;
+    top: 10px;
+  }
+  .cad-icon-left{
+    transform: scale(0.7);
+    position: relative;
+    right: -20px;
+    top: 10px;
+  }
+}
+@media(max-width: 650px){
+  .logo-title{
+    transform: scale(0.8);
+  }
+  .cad-icon-right{
+    transform: scale(0.7);
+    position: relative;
+    left: -30px;
+    top: -30px;
+  }
+  .cad-icon-left{
+    transform: scale(0.7);
+    position: relative;
+    right: -30px;
+    top: 60px;
+  }
+}
+@media(max-width: 450px){
+  .env-icon::after, .env-icon::before{
+    content: url('images/دورة التجويد (29).png'); /*taj al wakar  sticker*/
+  position: relative;
+  transform: scale(0.5);
+  z-index: 1000000;
+  }
+  .cad-container{
+    width: 400px !important;
+  }
+  .cad-icon-right{
+    transform: scale(0.7);
+    position: relative;
+    left: -30px;
+    top: -40px;
+  }
+  .cad-icon-left{
+    transform: scale(0.7);
+    position: relative;
+    right: -30px;
+    top: 60px;
+  }
+}
