@@ -195,8 +195,8 @@ body{
 
      }
     .branch01{
-    font-size: 0.8rem ;
-    width: 120px;
+    font-size: 0.9rem ;
+    width: 140px;
     height: 50px;
     right: 50%;
     top: 20%;
@@ -204,9 +204,9 @@ body{
   }
   
   .branch01::after{
-    width: 120px;
+    width: 140px;
     height: 50px;
-    font-size: 0.58rem ;
+    font-size: 0.7rem ;
     top: -120%;
   }
   .branch01::before{
@@ -215,8 +215,8 @@ body{
         top: 80%;
   }
       .branch02{
-    font-size: 0.8rem ;
-    width: 120px;
+    font-size: 0.9rem ;
+    width: 140px;
     height: 50px;
     left: 50%;
     top: 67%;
@@ -224,9 +224,9 @@ body{
   }
   
   .branch02::after{
-    width: 120px;
+    width: 140px;
     height: 50px;
-    font-size: 0.58rem ;
+    font-size: 0.7rem ;
     bottom: -120%;
   }
   .branch02::before{
